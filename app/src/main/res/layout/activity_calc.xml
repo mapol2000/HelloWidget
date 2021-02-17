@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalcActivity">
+
+    <EditText
+        android:id="@+id/Edit1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/Edit2"
+        app:layout_constraintEnd_toEndOf="@+id/Edit2"
+        app:layout_constraintStart_toStartOf="@+id/Edit2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Edit2"
+        android:layout_width="51dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="115dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/BtnAdd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Edit1" />
+
+    <Button
+        android:id="@+id/BtnAdd"
+        android:layout_width="384dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="21dp"
+        android:onClick="computeAdd"
+        android:text="더하기"
+        app:layout_constraintBottom_toTopOf="@+id/BtnSub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Edit2" />
+
+    <Button
+        android:id="@+id/BtnMul"
+        android:layout_width="384dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="21dp"
+        android:onClick="computeMul"
+        android:text="곱하기"
+        app:layout_constraintBottom_toTopOf="@+id/BtnDiv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnSub" />
+
+    <Button
+        android:id="@+id/BtnSub"
+        android:layout_width="384dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="21dp"
+        android:onClick="computeSub"
+        android:text="빼기"
+        app:layout_constraintBottom_toTopOf="@+id/BtnMul"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnAdd" />
+
+    <Button
+        android:id="@+id/BtnDiv"
+        android:layout_width="384dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="89dp"
+        android:onClick="computeDiv"
+        android:text="나누기"
+        app:layout_constraintBottom_toTopOf="@+id/TextResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnMul" />
+
+    <TextView
+        android:id="@+id/TextResult"
+        android:layout_width="389dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="51dp"
+        android:text="계산 결과: "
+        android:textColor="#FF0000"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnDiv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

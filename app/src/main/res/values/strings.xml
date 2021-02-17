@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HelloWidget</string>
+    <string name="exapp_name">초간단 계산기</string>
+    <string name="animal_app">애완동물 사진 보기</string>
+</resources>
